@@ -36,7 +36,7 @@ class MyClient(discord.Client):
 # intents.message_content = True
 # intents.guilds = True
 # intents.members = True
-intents = discord.Intents.all()     
+intents = discord.Intents.all()
 
 
 client = MyClient(intents=intents)
@@ -84,7 +84,7 @@ async def on_message(message: discord.Message):
     else:
         logging.debug(f"Message from {message.author} in {message.guild.name}({message.guild.id}):{message.channel.name}: {message.content}")
         return
-    
+
 # Bootstrap command
 @client.tree.command()
 # @app_commands.checks.cooldown(1, 600, key=lambda i: (i.guild_id, i.user.id))
