@@ -63,7 +63,7 @@ async def on_message(message: discord.Message):
             if message.content:
                 # Here we ban the user cause they posted in the channel :)
                 if not DEBUG:
-                    message.author.ban(reason=f"Posted in the {channel.name} channel.")
+                    await message.author.ban(reason=f"Posted in the {channel.name} channel.")
                     logging.info(f"{message.author} was banned for posting in {channel.name}.")
                 else:
                     await message.channel.send(content=f"{message.author} is a bozo.")
