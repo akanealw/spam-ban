@@ -1,4 +1,3 @@
-version: "3.9"
 services:
   bot:
     # user: "1000:1000" # Didn't work
